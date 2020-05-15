@@ -20,6 +20,10 @@ all : $(TESTS)
 clean :
 	rm -f $(TESTS) gtest.a gtest_main.a *.o *.gcov *.gcda *.gcno
 
+test:
+	./PracticeTest
+	gcov -fbc Practice.cpp
+
 # Builds gtest.a and gtest_main.a.
 GTEST_SRCS_ = $(GTEST_DIR)/src/*.cc $(GTEST_DIR)/src/*.h $(GTEST_HEADERS)
 
